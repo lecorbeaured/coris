@@ -1,0 +1,50 @@
+# Coris App - Robots.txt Configuration
+# Place this file in the root directory: https://corisapp.dev/robots.txt
+
+# Default rules for all bots
+User-agent: *
+Allow: /
+Allow: /debt-payoff/
+Allow: /bill-tracker/
+Allow: /contact/
+Allow: /legal/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Delay between requests (optional, helps with server load)
+Crawl-delay: 1
+
+# Request rate (max pages per second)
+Request-rate: 10/1s
+
+# Specific rules for Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://corisapp.dev/sitemap.xml
+Sitemap: https://corisapp.dev/sitemap-debt.xml
+Sitemap: https://corisapp.dev/sitemap-bills.xml
+
+# Contact information for crawl issues
+# Support: support@corisapp.dev

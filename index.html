@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free bill tracker app with AI assistant. Never miss a payment, organize bills by category, track payment dates, and manage your finances with ease.">
+    <meta name="keywords" content="bill tracker, bill organizer, payment reminder, bill management app, due date tracker, utilities tracker, bill payment reminder">
+    <meta name="author" content="Coris App">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://corisapp.dev/bill-tracker/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Free Bill Tracker App | Coris App">
+    <meta property="og:description" content="Track bills, manage payments, and never miss a due date. AI-powered bill assistant and payment organization tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://corisapp.dev/bill-tracker/">
+    <meta property="og:image" content="https://corisapp.dev/og-image-bills.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Coris App">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Bill Tracker App - Never Miss a Payment">
+    <meta name="twitter:description" content="Track bills, organize payments, and manage due dates with AI assistance. Stay on top of your finances.">
+    <meta name="twitter:image" content="https://corisapp.dev/og-image-bills.png">
+    <meta name="twitter:creator" content="@corisapp">
+    
+    <!-- Additional Meta Tags -->
+    <meta property="article:modified_time" content="2025-10-24T00:00:00Z">
+    <meta property="article:published_time" content="2025-01-01T00:00:00Z">
+    <link rel="alternate" hreflang="en-US" href="https://corisapp.dev/bill-tracker/">
+    
+    <!-- Structured Data - Web Application -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Coris Bill Tracker",
+      "description": "Free bill tracking and management app with AI assistant to help you organize and manage bills",
+      "url": "https://corisapp.dev/bill-tracker/",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Coris",
+        "url": "https://corisapp.dev"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Coris"
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-10-24",
+      "featureList": [
+        "Bill tracking and organization",
+        "Payment date reminders",
+        "AI bill assistant",
+        "Category organization",
+        "Local data storage"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Coris",
+      "url": "https://corisapp.dev",
+      "description": "Free personal finance tools for debt management and bill tracking",
+      "foundingDate": "2025",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "support@corisapp.dev",
+        "url": "https://corisapp.dev/contact"
+      }
+    }
+    </script>
+    
+    <title>Free Bill Tracker App | Never Miss a Payment | Coris App</title>
+    
+    <!-- Favicon: Emoji in browser tab -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>💰</text></svg>">
+    
+    <!-- Google Analytics (GA4) - REPLACE 'G-XXXXXXXXXX' with your actual GA4 ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Meta Pixel - REPLACE '1234567890123456' with your actual Pixel ID -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1234567890123456');
+        fbq('track', 'PageView');
+    </script>
+    
+    <!-- TikTok Pixel - REPLACE 'ABCD1234EFGH5678' with your actual TikTok Pixel ID -->
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+            ttq.load('ABCD1234EFGH5678');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2d3748;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hamburger Menu */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2000;
+            background: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .menu-btn:hover {
+            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+            transform: scale(1.05);
+        }
+
+        .menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* Side Drawer */
+        .side-drawer {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 320px;
+            height: 100vh;
+            background: white;
+            box-shadow: 4px 0 30px rgba(0,0,0,0.3);
+            z-index: 1500;
+            transition: left 0.4s ease;
+            overflow-y: auto;
+        }
+
+        .side-drawer.open {
+            left: 0;
+        }
+
+        .drawer-header {
+            padding: 30px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .drawer-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .drawer-header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .drawer-links {
+            padding: 20px 0;
+        }
+
+        .drawer-links a {
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .drawer-links a:hover {
+            background: #f7fafc;
+            border-left-color: #667eea;
+            color: #667eea;
+        }
+
+        .drawer-links a.active {
+            background: #edf2f7;
+            border-left-color: #667eea;
+            color: #667eea;
+        }
+
+        .drawer-links a span {
+            margin-right: 12px;
+            font-size: 1.3rem;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 60px 20px 40px;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        /* Dashboard Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* Bill Entry Form */
+        .bill-form {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #4a5568;
+        }
+
+        .form-group input, .form-group select {
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        .btn-danger {
+            background: #fc8181;
+            box-shadow: 0 4px 15px rgba(252, 129, 129, 0.4);
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 6px 20px rgba(252, 129, 129, 0.6);
+        }
+
+        .btn-success {
+            background: #48bb78;
+            box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-success:hover {
+            box-shadow: 0 6px 20px rgba(72, 187, 120, 0.6);
+        }
+
+        /* Bills List */
+        .bills-container {
+            display: grid;
+            gap: 15px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .bill-item {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+            gap: 20px;
+        }
+
+        .bill-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .bill-item.overdue {
+            border-color: #fc8181;
+            background: #fff5f5;
+        }
+
+        .bill-item.due-soon {
+            border-color: #f6ad55;
+            background: #fffaf0;
+        }
+
+        .bill-item.paid {
+            border-color: #48bb78;
+            background: #f0fff4;
+            opacity: 0.7;
+        }
+
+        .bill-info {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .bill-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #2d3748;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .bill-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .bill-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .bill-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            white-space: nowrap;
+            flex-shrink: 0;
+            text-align: right;
+            min-width: 100px;
+        }
+
+        .bill-amount-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .bill-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-badge.overdue {
+            background: #fc8181;
+            color: white;
+        }
+
+        .status-badge.due-soon {
+            background: #f6ad55;
+            color: white;
+        }
+
+        .status-badge.paid {
+            background: #48bb78;
+            color: white;
+        }
+
+        /* Chat Interface */
+        /* ========================================
+           LEGAL & CONTACT MODALS
+           ======================================== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 0;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .modal-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding: 0;
+            background: white;
+        }
+
+        .modal-tab, .legal-tab {
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #718096;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .modal-tab:hover, .legal-tab:hover {
+            color: #667eea;
+        }
+
+        .modal-tab.active, .legal-tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .legal-tab-content {
+            display: none;
+            padding: 25px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .legal-tab-content.active {
+            display: block;
+        }
+
+        .legal-tab-content h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .legal-tab-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .legal-tab-content p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .legal-tab-content ul {
+            margin-left: 20px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .legal-tab-content li {
+            margin-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                max-height: 90vh;
+            }
+
+            .modal-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .modal-tab, .legal-tab {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ========================================
+           CORIS CHAT - FLOATING MODAL
+           ======================================== */
+        .chat-bubble {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        /* Pulsing badge for discovery */
+        .chat-bubble::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+
+        .chat-bubble.has-interacted::after {
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(102, 126, 234, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+            }
+        }
+
+        /* Floating chat window */
+        .chat-container {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            width: 380px;
+            max-height: 500px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            z-index: 1800;
+            display: flex;
+            flex-direction: column;
+            animation: slideUpChat 0.3s ease;
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .chat-container.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+
+        @keyframes slideUpChat {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: move;
+            user-select: none;
+        }
+
+        .chat-header-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .chat-close-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .chat-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            background: #f7fafc;
+        }
+
+        .chat-message {
+            margin-bottom: 12px;
+            animation: slideIn 0.3s ease;
+        }
+
+        .chat-message.user {
+            text-align: right;
+        }
+
+        .chat-message.assistant {
+            text-align: left;
+        }
+
+        .message-bubble {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 12px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .chat-message.user .message-bubble {
+            background: #667eea;
+            color: white;
+            border-radius: 12px 0 12px 12px;
+        }
+
+        .chat-message.assistant .message-bubble {
+            background: white;
+            color: #2d3748;
+            border: 1px solid #e2e8f0;
+            border-radius: 0 12px 12px 12px;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+            padding: 12px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            border-radius: 0 0 16px 16px;
+        }
+
+        .chat-input {
+            flex: 1;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .chat-send-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .chat-send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Welcome message styling */
+        .chat-welcome {
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            .chat-container {
+                width: calc(100% - 40px);
+                bottom: 90px;
+                right: 20px;
+                max-height: 50vh;
+            }
+
+            .chat-bubble {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            .message-bubble {
+                max-width: 90%;
+            }
+        }
+
+        }
+
+        .chat-message.user {
+            text-align: right;
+        }
+
+        .chat-message.assistant {
+            text-align: left;
+        }
+
+        .message-bubble {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 70%;
+        }
+
+        .chat-message.user .message-bubble {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .chat-message.assistant .message-bubble {
+            background: white;
+            color: #2d3748;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            background: white;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .chat-send-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chat-send-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #667eea;
+            background: #edf2f7;
+            color: #667eea;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .side-drawer {
+                width: 280px;
+                left: -280px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bill-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                width: 100%;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+
+            .bill-actions {
+                width: 100%;
+                justify-content: flex-end;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            
+            .bill-item button {
+                flex: 0 1 calc(50% - 4px);
+                min-width: 100px;
+                min-height: 40px;
+            }
+            
+            .bill-amount-actions {
+                width: 100%;
+                align-items: flex-start;
+            }
+        }
+
+        /* ========================================
+           UNIFIED FOOTER
+           ======================================== */
+        .footer {
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 30px 20px;
+            margin-top: auto;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .footer-links span {
+            color: #cbd5e0;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            color: #a0aec0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 20px 15px;
+                margin-top: 40px;
+            }
+
+            .footer-links {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+
+            .footer-links a {
+                font-size: 0.85rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <button class="menu-btn" onclick="toggleMenu()" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay -->
+    <div class="overlay" onclick="toggleMenu()" id="overlay"></div>
+
+    <!-- Side Drawer -->
+    <nav class="side-drawer" id="sideDrawer">
+        <div class="drawer-header">
+            <h2>💰 Financial Suite</h2>
+            <p>Your path to financial freedom</p>
+        </div>
+        <div class="drawer-links">
+            <a href="payoff.html" onclick="toggleMenu()"><span>💳</span> Coris Debt Pay Off App</a>
+            <a href="#" class="active"><span>💰</span> Coris Pay</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>💰 Coris Pay</h1>
+        <p>Take control. Stay organized. Never miss a bill.</p>
+        <p style="font-size: 1rem; margin-top: 10px; opacity: 0.9;">✨ 100% FREE</p>
+    </div>
+
+    <div class="container">
+        <!-- Email Capture Banner -->
+        <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 15px; color: white;">📬 Stay Updated</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px; opacity: 0.95;">Get notified about new features and updates!</p>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <input type="email" id="emailSignup" placeholder="Enter your email" style="width: 100%; padding: 14px; border: none; border-radius: 10px; font-size: 1rem; margin-bottom: 15px;">
+                <button class="btn" style="background: white; color: #667eea; width: 100%;" onclick="captureEmail()">Subscribe to Updates</button>
+            </div>
+            <p style="font-size: 0.85rem; margin-top: 15px; opacity: 0.8;">No spam, unsubscribe anytime</p>
+        </div>
+
+        <!-- Dashboard Stats -->
+        <div class="card">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Bills</h3>
+                    <p id="totalBills">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Due This Month</h3>
+                    <p id="dueThisMonth">$0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Overdue</h3>
+                    <p id="overdueBills">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Next Payment</h3>
+                    <p id="nextPayment">-</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Bill Form -->
+        <div class="card">
+            <h2 style="margin-bottom: 20px;">➕ Add New Bill</h2>
+            <div class="bill-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Bill Name</label>
+                        <input type="text" id="billName" placeholder="e.g., Electric Bill">
+                    </div>
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input type="number" id="billAmount" placeholder="0.00" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label>Due Date</label>
+                        <input type="date" id="billDueDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="billCategory">
+                            <option value="Utilities">Utilities</option>
+                            <option value="Subscriptions">Subscriptions</option>
+                            <option value="Loans">Loans</option>
+                            <option value="Insurance">Insurance</option>
+                            <option value="Rent/Mortgage">Rent/Mortgage</option>
+                            <option value="Credit Cards">Credit Cards</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Childcare">Childcare</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Frequency</label>
+                        <select id="billFrequency">
+                            <option value="one-time">One-Time</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="biweekly">Bi-Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Auto-Pay?</label>
+                        <select id="billAutopay">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn" onclick="addBill()">Add Bill</button>
+            </div>
+        </div>
+
+        <!-- Bills List -->
+        <div class="card">
+            <h2 style="margin-bottom: 20px;">📋 Your Bills</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterBills('all')">All</button>
+                <button class="filter-btn" onclick="filterBills('due-soon')">Due Soon</button>
+                <button class="filter-btn" onclick="filterBills('overdue')">Overdue</button>
+                <button class="filter-btn" onclick="filterBills('paid')">Paid</button>
+            </div>
+
+            <div id="billsList" class="bills-container">
+                <p style="text-align: center; color: #718096; padding: 40px;">No bills yet. Add your first bill above! 👆</p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="card" style="background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%); color: white;">
+            <div style="text-align: center;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: white;">💳 Need Help Paying Off Debt?</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Create a strategic plan to eliminate your debts faster</p>
+                <a href="payoff.html" class="btn" style="background: white; color: #3182ce; display: inline-block; text-decoration: none;" onclick="trackCTA('Debt Payoff App')">Try Debt Payoff App (FREE) →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button (shows when chat is closed) -->
+    <!-- Legal Modal -->
+    <div id="legalModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📋 Legal Information</h2>
+                <button class="close-btn" onclick="closeLegalModal()">&times;</button>
+            </div>
+
+            <div class="modal-tabs">
+                <button class="legal-tab active" data-legal-tab="privacy" onclick="showLegalTab('privacy')">🔒 Privacy</button>
+                <button class="legal-tab" data-legal-tab="terms" onclick="showLegalTab('terms')">📋 Terms</button>
+                <button class="legal-tab" data-legal-tab="disclaimer" onclick="showLegalTab('disclaimer')">⚠️ Disclaimer</button>
+            </div>
+
+            <!-- Privacy Policy Tab -->
+            <div id="legal-privacy" class="legal-tab-content active">
+                <h3>🔒 Privacy Policy</h3>
+                <p><strong>Last Updated:</strong> <span id="privacyYear"></span></p>
+
+                <h3>Information We Collect</h3>
+                <p>Coris Pay is designed to work on your device. We do not store your personal bill information on our servers.</p>
+                <ul>
+                    <li>Your bill data stays on your device</li>
+                    <li>We do not access your financial information</li>
+                    <li>Your data is processed locally</li>
+                </ul>
+
+                <h3>Analytics & Tracking</h3>
+                <p>We may use analytics tools to understand how users interact with the app (Google Analytics, Meta Pixel). These tools may collect general usage data and location information (country/city level only).</p>
+
+                <h3>Your Rights</h3>
+                <ul>
+                    <li>You can clear your browser data anytime</li>
+                    <li>You can opt out of analytics with browser extensions</li>
+                    <li>We do not sell your data to third parties</li>
+                </ul>
+
+                <h3>Cookies</h3>
+                <p>The app may use cookies to enhance your experience, but does not require cookies to function.</p>
+
+                <h3>Contact</h3>
+                <p>For privacy concerns, please <a href="#" onclick="closeLegalModal(); openContactModal(); return false;">contact us</a>.</p>
+            </div>
+
+            <!-- Terms of Service Tab -->
+            <div id="legal-terms" class="legal-tab-content">
+                <h3>📋 Terms of Service</h3>
+                <p><strong>Last Updated:</strong> <span id="termsYear"></span></p>
+
+                <h3>Acceptance of Terms</h3>
+                <p>By using Coris Pay, you agree to these terms and conditions. If you do not agree, please do not use the app.</p>
+
+                <h3>Use License</h3>
+                <p>Permission is granted to temporarily download one copy of the app for personal, non-commercial use only.</p>
+
+                <h3>Disclaimer of Warranties</h3>
+                <p>The app is provided "as is" without warranty of any kind, express or implied.</p>
+
+                <h3>Limitations of Liability</h3>
+                <p>In no event shall Coris or its suppliers be liable for any damages arising out of the use or inability to use the app.</p>
+
+                <h3>Accuracy of Materials</h3>
+                <p>The calculations and information provided are for informational purposes only. While we strive for accuracy, results may vary from actual billing.</p>
+
+                <h3>Links</h3>
+                <p>The app may contain links to external websites. We are not responsible for the content of external websites.</p>
+
+                <h3>Modifications</h3>
+                <p>Coris may revise these terms of service at any time without notice.</p>
+            </div>
+
+            <!-- Disclaimer Tab -->
+            <div id="legal-disclaimer" class="legal-tab-content">
+                <h3>⚠️ Disclaimer</h3>
+                <p><strong>Last Updated:</strong> <span id="disclaimerYear"></span></p>
+
+                <h3>Information Only</h3>
+                <p><strong>IMPORTANT:</strong> Coris Pay is for informational purposes only. It is NOT financial advice.</p>
+
+                <h3>Bill Tracking</h3>
+                <p>This app helps you track and manage your bills. Your actual bills, due dates, and amounts should always be verified with your service providers.</p>
+
+                <h3>Important Assumptions</h3>
+                <ul>
+                    <li>Bill amounts may change</li>
+                    <li>Due dates may vary monthly</li>
+                    <li>Promotions and discounts can affect amounts</li>
+                    <li>Service providers may change terms</li>
+                    <li>This is a reminder tool, not a guarantee</li>
+                </ul>
+
+                <h3>Your Responsibility</h3>
+                <p>You are responsible for verifying all bill information and making timely payments. Always check your official billing statements and service provider websites.</p>
+
+                <h3>No Guarantees</h3>
+                <p>We make no guarantee that this app will help you avoid late payments or financial issues.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📧 Get In Touch</h2>
+                <button class="close-btn" onclick="closeContactModal()">&times;</button>
+            </div>
+
+            <div style="padding: 25px;">
+                <p style="margin-bottom: 20px; color: #4a5568;">Have questions? Feedback? Found a bug? We'd love to hear from you!</p>
+
+                <form id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label for="contactName">Your Name *</label>
+                        <input type="text" id="contactName" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email *</label>
+                        <input type="email" id="contactEmail" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">Subject *</label>
+                        <input type="text" id="contactSubject" placeholder="e.g., Feature Request, Bug Report, General Inquiry" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message *</label>
+                        <textarea id="contactMessage" placeholder="Tell us what's on your mind..." rows="6" required style="border: 2px solid #e2e8f0; border-radius: 8px; padding: 12px; font-family: inherit; font-size: 1rem; width: 100%;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Send Message</button>
+                </form>
+
+                <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #718096; font-size: 0.9rem;">
+                    💡 <strong>Tip:</strong> Clicking "Send Message" will open your default email client with this form pre-filled. Just review and send!
+                </p>
+
+                <div style="background: #f7fafc; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <p style="margin: 0; color: #4a5568; font-size: 0.95rem;">
+                        <strong>📧 Email:</strong> support@corispay.com<br>
+                        <strong>⏱️ Response Time:</strong> Usually within 24-48 hours
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coris Chat Bubble -->
+    <button class="chat-bubble" id="chatBubble" onclick="toggleChat()" title="Coris Chat">
+        💬
+    </button>
+
+    <!-- Coris Chat Floating Modal -->
+    <div class="chat-container hidden" id="chatContainer">
+        <div class="chat-header" id="chatHeader">
+            <div class="chat-header-title">
+                <span>💬</span>
+                <span>Coris Chat</span>
+            </div>
+            <button class="chat-close-btn" onclick="toggleChat()" title="Minimize">−</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Ask about your bills..." onkeypress="handleChatEnter(event)">
+            <button class="chat-send-btn" onclick="sendChatMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        let bills = [];
+        let billIdCounter = 0;
+        let currentFilter = 'all';
+
+        // Load bills from localStorage on page load
+        function loadBills() {
+            const savedBills = localStorage.getItem('resolvpay_bills');
+            if (savedBills) {
+                bills = JSON.parse(savedBills);
+                billIdCounter = bills.length > 0 ? Math.max(...bills.map(b => b.id)) : 0;
+                updateDashboard();
+                renderBills();
+            }
+        }
+
+        // Save bills to localStorage
+        function saveBills() {
+            localStorage.setItem('resolvpay_bills', JSON.stringify(bills));
+        }
+
+        function toggleMenu() {
+            const drawer = document.getElementById('sideDrawer');
+            const overlay = document.getElementById('overlay');
+            const menuBtn = document.getElementById('menuBtn');
+            
+            drawer.classList.toggle('open');
+            overlay.classList.toggle('show');
+            menuBtn.classList.toggle('active');
+        }
+
+        // ========================================
+        // LEGAL & CONTACT MODAL FUNCTIONS
+        // ========================================
+        function showLegalModal(tabName) {
+            document.getElementById('legalModal').classList.add('show');
+            showLegalTab(tabName);
+        }
+
+        function closeLegalModal() {
+            document.getElementById('legalModal').classList.remove('show');
+        }
+
+        function showLegalTab(tabName) {
+            document.querySelectorAll('.legal-tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.legal-tab').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('legal-' + tabName).classList.add('active');
+            document.querySelector(`[data-legal-tab="${tabName}"]`).classList.add('active');
+        }
+
+        function openContactModal() {
+            document.getElementById('contactModal').classList.add('show');
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.remove('show');
+        }
+
+        function submitContactForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+            const mailtoLink = `mailto:support@corispay.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+            window.location.href = mailtoLink;
+            document.getElementById('contactForm').reset();
+            alert('Please send the email that opened in your default mail client. Thanks!');
+        }
+
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const legalModal = document.getElementById('legalModal');
+            const contactModal = document.getElementById('contactModal');
+            if (event.target === legalModal) closeLegalModal();
+            if (event.target === contactModal) closeContactModal();
+        }
+
+        // ========================================
+        // CORIS CHAT INITIALIZATION
+        // ========================================
+        let chatHasInteracted = false;
+        let isDragging = false;
+        let dragOffsetX = 0;
+        let dragOffsetY = 0;
+
+        // Check if user has interacted with chat before
+        function initCorisChat() {
+            const hasInteracted = localStorage.getItem('corisChat_hasInteracted');
+            if (hasInteracted) {
+                chatHasInteracted = true;
+                document.getElementById('chatBubble').classList.add('has-interacted');
+            } else {
+                // First time visitor: auto-open after 3 seconds
+                setTimeout(() => {
+                    if (!chatHasInteracted) {
+                        openCorisChat();
+                        addWelcomeMessage();
+                    }
+                }, 3000);
+            }
+
+            // Add drag functionality
+            const chatHeader = document.getElementById('chatHeader');
+            if (chatHeader) {
+                chatHeader.addEventListener('mousedown', startDrag);
+            }
+        }
+
+        function toggleChat() {
+            const chatContainer = document.getElementById('chatContainer');
+            if (chatContainer) {
+                chatContainer.classList.toggle('hidden');
+            }
+            markChatAsInteracted();
+        }
+
+        function openCorisChat() {
+            const chatContainer = document.getElementById('chatContainer');
+            if (chatContainer) {
+                chatContainer.classList.remove('hidden');
+            }
+        }
+
+        function markChatAsInteracted() {
+            if (!chatHasInteracted) {
+                chatHasInteracted = true;
+                localStorage.setItem('corisChat_hasInteracted', 'true');
+                document.getElementById('chatBubble').classList.add('has-interacted');
+            }
+        }
+
+        function addWelcomeMessage() {
+            const chatMessages = document.getElementById('chatMessages');
+            if (chatMessages) {
+                const welcomeDiv = document.createElement('div');
+                welcomeDiv.className = 'chat-message assistant';
+                welcomeDiv.innerHTML = `
+                    <div class="message-bubble">
+                        <strong>Welcome to Coris Chat! 👋</strong><br>
+                        I'm here to help you with your bills. Ask me anything like:
+                        <br>• "What's due this week?"
+                        <br>• "Show my subscriptions"
+                        <br>• "Help me track my bills"
+                    </div>
+                `;
+                chatMessages.appendChild(welcomeDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+
+        // Drag functionality for floating window
+        function startDrag(e) {
+            if (e.target.closest('.chat-close-btn')) return;
+            
+            isDragging = true;
+            const chatContainer = document.getElementById('chatContainer');
+            const rect = chatContainer.getBoundingClientRect();
+            dragOffsetX = e.clientX - rect.left;
+            dragOffsetY = e.clientY - rect.top;
+            
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('mouseup', stopDrag);
+        }
+
+        function drag(e) {
+            if (!isDragging) return;
+            
+            const chatContainer = document.getElementById('chatContainer');
+            const newX = e.clientX - dragOffsetX;
+            const newY = e.clientY - dragOffsetY;
+            
+            // Keep within viewport
+            const maxX = window.innerWidth - chatContainer.offsetWidth;
+            const maxY = window.innerHeight - chatContainer.offsetHeight;
+            
+            chatContainer.style.right = 'auto';
+            chatContainer.style.bottom = 'auto';
+            chatContainer.style.left = Math.max(0, Math.min(newX, maxX)) + 'px';
+            chatContainer.style.top = Math.max(0, Math.min(newY, maxY)) + 'px';
+        }
+
+        function stopDrag() {
+            isDragging = false;
+            document.removeEventListener('mousemove', drag);
+            document.removeEventListener('mouseup', stopDrag);
+        }
+
+        function toggleChat() {
+            const chatContainer = document.getElementById('chatContainer');
+            if (chatContainer) {
+                chatContainer.classList.toggle('hidden');
+            }
+            markChatAsInteracted();
+        }
+
+        function captureEmail() {
+            const email = document.getElementById('emailSignup').value;
+            
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Track email signup
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'email_signup', {
+                    'product': 'Coris Pay'
+                });
+            }
+
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Email Signup - Coris Pay'
+                });
+            }
+
+            // Store email locally (you'll export these later)
+            let emails = JSON.parse(localStorage.getItem('resolvpay_emails') || '[]');
+            if (!emails.includes(email)) {
+                emails.push(email);
+                localStorage.setItem('resolvpay_emails', JSON.stringify(emails));
+            }
+
+            alert('✅ Thanks! We\'ll keep you updated on new features.');
+            document.getElementById('emailSignup').value = '';
+        }
+
+        function trackCTA(destination) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cta_click', {
+                    'destination': destination,
+                    'page': 'Coris Pay'
+                });
+            }
+        }
+
+        function addBill() {
+            const name = document.getElementById('billName').value;
+            const amount = parseFloat(document.getElementById('billAmount').value);
+            const dueDate = document.getElementById('billDueDate').value;
+            const category = document.getElementById('billCategory').value;
+            const frequency = document.getElementById('billFrequency').value;
+            const autopay = document.getElementById('billAutopay').value === 'yes';
+
+            if (!name || !amount || !dueDate) {
+                alert('Please fill in all required fields!');
+                return;
+            }
+
+            const bill = {
+                id: ++billIdCounter,
+                name,
+                amount,
+                dueDate,
+                category,
+                frequency,
+                autopay,
+                paid: false,
+                createdAt: new Date()
+            };
+
+            bills.push(bill);
+            
+            // Save to localStorage
+            saveBills();
+            
+            // Clear form
+            document.getElementById('billName').value = '';
+            document.getElementById('billAmount').value = '';
+            document.getElementById('billDueDate').value = '';
+            
+            updateDashboard();
+            renderBills();
+
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'add_bill', {
+                    'category': category,
+                    'amount': amount
+                });
+            }
+        }
+
+        function getDaysUntilDue(dueDate) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const due = new Date(dueDate);
+            due.setHours(0, 0, 0, 0);
+            const diffTime = due - today;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            return diffDays;
+        }
+
+        function getBillStatus(bill) {
+            if (bill.paid) return 'paid';
+            const daysUntil = getDaysUntilDue(bill.dueDate);
+            if (daysUntil < 0) return 'overdue';
+            if (daysUntil <= 7) return 'due-soon';
+            return 'upcoming';
+        }
+
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        function renderBills() {
+            const container = document.getElementById('billsList');
+            let filteredBills = bills;
+
+            if (currentFilter !== 'all') {
+                filteredBills = bills.filter(bill => getBillStatus(bill) === currentFilter);
+            }
+
+            if (filteredBills.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #718096; padding: 40px;">No bills match this filter.</p>';
+                return;
+            }
+
+            // Sort by due date
+            filteredBills.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+
+            container.innerHTML = filteredBills.map(bill => {
+                const status = getBillStatus(bill);
+                const daysUntil = getDaysUntilDue(bill.dueDate);
+                let statusText = '';
+                
+                if (status === 'paid') statusText = 'Paid';
+                else if (status === 'overdue') statusText = `${Math.abs(daysUntil)} days overdue`;
+                else if (status === 'due-soon') statusText = daysUntil === 0 ? 'Due today' : `Due in ${daysUntil} days`;
+                else statusText = `Due in ${daysUntil} days`;
+
+                return `
+                    <div class="bill-item ${status}">
+                        <div class="bill-info">
+                            <h3>${bill.name}</h3>
+                            <div class="bill-meta">
+                                <span>📅 ${formatDate(bill.dueDate)}</span>
+                                <span>🏷️ ${bill.category}</span>
+                                <span>🔄 ${bill.frequency}</span>
+                                ${bill.autopay ? '<span>⚡ Auto-pay</span>' : ''}
+                            </div>
+                            <div style="margin-top: 8px;">
+                                <span class="status-badge ${status}">${statusText}</span>
+                            </div>
+                        </div>
+                        <div class="bill-amount-actions">
+                            <div class="bill-amount">${formatCurrency(bill.amount)}</div>
+                            <div class="bill-actions">
+                                ${!bill.paid ? `<button class="btn btn-small btn-success" onclick="markAsPaid(${bill.id})">✓ Paid</button>` : ''}
+                                <button class="btn btn-small btn-danger" onclick="deleteBill(${bill.id})">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function markAsPaid(billId) {
+            const bill = bills.find(b => b.id === billId);
+            if (bill) {
+                bill.paid = true;
+                saveBills();
+                updateDashboard();
+                renderBills();
+
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'mark_paid', {
+                        'bill_name': bill.name,
+                        'amount': bill.amount
+                    });
+                }
+            }
+        }
+
+        function deleteBill(billId) {
+            if (confirm('Are you sure you want to delete this bill?')) {
+                bills = bills.filter(b => b.id !== billId);
+                saveBills();
+                updateDashboard();
+                renderBills();
+            }
+        }
+
+        function filterBills(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderBills();
+        }
+
+        function updateDashboard() {
+            const totalBills = bills.length;
+            const activeBills = bills.filter(b => !b.paid);
+            
+            const today = new Date();
+            const thisMonth = today.getMonth();
+            const thisYear = today.getFullYear();
+            
+            const dueThisMonth = activeBills
+                .filter(b => {
+                    const dueDate = new Date(b.dueDate);
+                    return dueDate.getMonth() === thisMonth && dueDate.getFullYear() === thisYear;
+                })
+                .reduce((sum, b) => sum + b.amount, 0);
+
+            const overdue = activeBills.filter(b => getDaysUntilDue(b.dueDate) < 0).length;
+
+            const nextBill = activeBills
+                .filter(b => getDaysUntilDue(b.dueDate) >= 0)
+                .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate))[0];
+
+            document.getElementById('totalBills').textContent = totalBills;
+            document.getElementById('dueThisMonth').textContent = formatCurrency(dueThisMonth);
+            document.getElementById('overdueBills').textContent = overdue;
+            document.getElementById('nextPayment').textContent = nextBill ? formatDate(nextBill.dueDate) : '-';
+        }
+
+        // Chat functionality
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            // Add user message
+            addChatMessage(message, 'user');
+            input.value = '';
+
+            // Process and respond
+            setTimeout(() => {
+                const response = processChatQuery(message.toLowerCase());
+                addChatMessage(response, 'assistant');
+            }, 500);
+
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'chat_query', {
+                    'query_length': message.length
+                });
+            }
+        }
+
+        function handleChatEnter(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        function addChatMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}`;
+            messageDiv.innerHTML = `<div class="message-bubble">${text}</div>`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function processChatQuery(query) {
+            const activeBills = bills.filter(b => !b.paid);
+
+            // ========================================
+            // BUDGET TRACKING FEATURES (from Budget Chat)
+            // ========================================
+
+            // Add expense/spending
+            if (query.includes('add') && (query.includes('spend') || query.includes('expense'))) {
+                const amountMatch = query.match(/\$?([\d.]+)/);
+                const amount = amountMatch ? parseFloat(amountMatch[1]) : null;
+                
+                if (!amount) {
+                    return "I can help track that! Please specify an amount like: 'Add $50 for groceries'";
+                }
+
+                const categoryMatch = query.match(/for\s+([^$]*?)(?:\s*$|\.)/i);
+                const category = categoryMatch ? categoryMatch[1].trim() : 'Miscellaneous';
+
+                // Store in localStorage for budget tracking
+                let expenses = JSON.parse(localStorage.getItem('corisExpenses') || '[]');
+                expenses.push({
+                    id: Date.now(),
+                    amount,
+                    category,
+                    date: new Date().toLocaleDateString(),
+                    description: `$${amount} - ${category}`
+                });
+                localStorage.setItem('corisExpenses', JSON.stringify(expenses));
+
+                const totalBills = activeBills.reduce((sum, b) => sum + b.amount, 0);
+                const totalExpenses = expenses.reduce((sum, e) => sum + e.amount, 0);
+                const totalSpent = totalBills + totalExpenses;
+
+                return `✅ Added Expense<br><br>Amount: ${formatCurrency(amount)}<br>Category: ${category}<br><br>📊 Updated Totals:<br>Bills: ${formatCurrency(totalBills)}<br>Other Expenses: ${formatCurrency(totalExpenses)}<br>Total Spent: ${formatCurrency(totalSpent)}`;
+            }
+
+            // Show spending breakdown
+            if (query.includes('breakdown') || (query.includes('spending') && query.includes('breakdown'))) {
+                const expenses = JSON.parse(localStorage.getItem('corisExpenses') || '[]');
+                const totalBills = activeBills.reduce((sum, b) => sum + b.amount, 0);
+                let response = '📊 Spending Breakdown<br><br>';
+
+                if (activeBills.length > 0) {
+                    response += '<strong>Bills:</strong><br>';
+                    activeBills.forEach(b => {
+                        response += `• ${b.name}: ${formatCurrency(b.amount)}<br>`;
+                    });
+                    response += `<strong>Total Bills: ${formatCurrency(totalBills)}</strong><br><br>`;
+                }
+
+                if (expenses.length > 0) {
+                    response += '<strong>Other Expenses:</strong><br>';
+                    const byCategory = {};
+                    expenses.forEach(e => {
+                        byCategory[e.category] = (byCategory[e.category] || 0) + e.amount;
+                    });
+                    for (const [cat, total] of Object.entries(byCategory)) {
+                        response += `• ${cat}: ${formatCurrency(total)}<br>`;
+                    }
+                    const totalExpenses = expenses.reduce((sum, e) => sum + e.amount, 0);
+                    response += `<br><strong>Total Expenses: ${formatCurrency(totalExpenses)}</strong><br>`;
+                } else {
+                    response += 'No other expenses tracked yet.<br>';
+                }
+
+                return response;
+            }
+
+            // Show all expenses
+            if (query.includes('expense') && (query.includes('show') || query.includes('list') || query.includes('all'))) {
+                const expenses = JSON.parse(localStorage.getItem('corisExpenses') || '[]');
+                
+                if (expenses.length === 0) {
+                    return '📝 No expenses tracked yet. Try: "Add $50 for groceries"';
+                }
+
+                let list = '📝 Your Expenses<br><br>';
+                expenses.forEach(e => {
+                    list += `• ${formatCurrency(e.amount)} - ${e.category} (${e.date})<br>`;
+                });
+
+                const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+                list += `<br><strong>Total: ${formatCurrency(total)}</strong>`;
+                return list;
+            }
+
+            // Financial advice
+            if (query.includes('advice') || query.includes('optimize') || query.includes('save')) {
+                const expenses = JSON.parse(localStorage.getItem('corisExpenses') || '[]');
+                const totalBills = activeBills.reduce((sum, b) => sum + b.amount, 0);
+                const totalExpenses = expenses.reduce((sum, e) => sum + e.amount, 0);
+                const total = totalBills + totalExpenses;
+
+                let advice = '💡 Financial Insights<br><br>';
+                
+                if (totalExpenses > totalBills) {
+                    advice += '⚠️ Your extra expenses exceed your bills!<br>';
+                    advice += '• Consider reducing discretionary spending<br>';
+                    advice += '• Track where most money goes<br>';
+                } else if (totalBills > totalExpenses * 2) {
+                    advice += '📊 Bills are your main expense<br>';
+                    advice += '• Look for opportunities to reduce bills<br>';
+                    advice += '• Check subscription cancellations<br>';
+                } else {
+                    advice += '✅ Your spending looks balanced!<br>';
+                    advice += '• Keep tracking to maintain control<br>';
+                }
+
+                advice += `<br>💰 Summary:<br>Bills: ${formatCurrency(totalBills)}<br>Other: ${formatCurrency(totalExpenses)}<br>Total: ${formatCurrency(total)}`;
+                return advice;
+            }
+
+            // ========================================
+            // BILL TRACKING FEATURES (Original)
+            // ========================================
+
+            // What's due this week?
+            if (query.includes('due') && (query.includes('week') || query.includes('7 days'))) {
+                const dueThisWeek = activeBills.filter(b => {
+                    const days = getDaysUntilDue(b.dueDate);
+                    return days >= 0 && days <= 7;
+                });
+
+                if (dueThisWeek.length === 0) {
+                    return "Great news! You have no bills due this week. 🎉";
+                }
+
+                const total = dueThisWeek.reduce((sum, b) => sum + b.amount, 0);
+                const billList = dueThisWeek.map(b => `${b.name} (${formatCurrency(b.amount)}) - ${formatDate(b.dueDate)}`).join('<br>');
+                return `You have ${dueThisWeek.length} bill(s) due this week for a total of ${formatCurrency(total)}:<br><br>${billList}`;
+            }
+
+            // What's due today?
+            if (query.includes('due') && query.includes('today')) {
+                const dueToday = activeBills.filter(b => getDaysUntilDue(b.dueDate) === 0);
+                
+                if (dueToday.length === 0) {
+                    return "No bills due today! You're all set. ✓";
+                }
+
+                const billList = dueToday.map(b => `${b.name} - ${formatCurrency(b.amount)}`).join('<br>');
+                return `Due today:<br><br>${billList}`;
+            }
+
+            // Total owed
+            if ((query.includes('total') || query.includes('how much')) && (query.includes('owe') || query.includes('due'))) {
+                const total = activeBills.reduce((sum, b) => sum + b.amount, 0);
+                const expenses = JSON.parse(localStorage.getItem('corisExpenses') || '[]');
+                const totalExpenses = expenses.reduce((sum, e) => sum + e.amount, 0);
+                return `You have ${activeBills.length} unpaid bills totaling ${formatCurrency(total)}. Plus ${formatCurrency(totalExpenses)} in other expenses tracked.`;
+            }
+
+            // Overdue bills
+            if (query.includes('overdue') || query.includes('late')) {
+                const overdue = activeBills.filter(b => getDaysUntilDue(b.dueDate) < 0);
+                
+                if (overdue.length === 0) {
+                    return "You have no overdue bills. Great job staying on top of things! 🌟";
+                }
+
+                const billList = overdue.map(b => {
+                    const days = Math.abs(getDaysUntilDue(b.dueDate));
+                    return `${b.name} - ${formatCurrency(b.amount)} (${days} days late)`;
+                }).join('<br>');
+                return `⚠️ You have ${overdue.length} overdue bill(s):<br><br>${billList}`;
+            }
+
+            // Subscriptions
+            if (query.includes('subscription')) {
+                const subscriptions = activeBills.filter(b => b.category === 'Subscriptions');
+                
+                if (subscriptions.length === 0) {
+                    return "You don't have any subscription bills tracked.";
+                }
+
+                const total = subscriptions.reduce((sum, b) => sum + b.amount, 0);
+                const billList = subscriptions.map(b => `${b.name} - ${formatCurrency(b.amount)}`).join('<br>');
+                return `Your subscriptions (${formatCurrency(total)}/month):<br><br>${billList}`;
+            }
+
+            // Category query
+            const categories = ['utilities', 'loans', 'insurance', 'rent', 'mortgage', 'credit card', 'medical', 'childcare', 'transportation', 'entertainment'];
+            for (const cat of categories) {
+                if (query.includes(cat)) {
+                    const categoryBills = activeBills.filter(b => b.category.toLowerCase().includes(cat));
+                    
+                    if (categoryBills.length === 0) {
+                        return `No ${cat} bills found.`;
+                    }
+
+                    const total = categoryBills.reduce((sum, b) => sum + b.amount, 0);
+                    const billList = categoryBills.map(b => `${b.name} - ${formatCurrency(b.amount)}`).join('<br>');
+                    return `Your ${cat} bills (${formatCurrency(total)}):<br><br>${billList}`;
+                }
+            }
+
+            // Next bill
+            if (query.includes('next') && query.includes('bill')) {
+                const nextBill = activeBills
+                    .filter(b => getDaysUntilDue(b.dueDate) >= 0)
+                    .sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate))[0];
+
+                if (!nextBill) {
+                    return "You have no upcoming bills!";
+                }
+
+                const days = getDaysUntilDue(nextBill.dueDate);
+                const daysText = days === 0 ? 'today' : days === 1 ? 'tomorrow' : `in ${days} days`;
+                return `Your next bill is ${nextBill.name} for ${formatCurrency(nextBill.amount)}, due ${daysText} (${formatDate(nextBill.dueDate)}).`;
+            }
+
+            // This month
+            if (query.includes('month') || query.includes('monthly')) {
+                const today = new Date();
+                const thisMonth = today.getMonth();
+                const thisYear = today.getFullYear();
+                
+                const monthBills = activeBills.filter(b => {
+                    const dueDate = new Date(b.dueDate);
+                    return dueDate.getMonth() === thisMonth && dueDate.getFullYear() === thisYear;
+                });
+
+                if (monthBills.length === 0) {
+                    return "No bills due this month!";
+                }
+
+                const total = monthBills.reduce((sum, b) => sum + b.amount, 0);
+                return `You have ${monthBills.length} bill(s) due this month totaling ${formatCurrency(total)}.`;
+            }
+
+            // Autopay
+            if (query.includes('autopay') || query.includes('auto pay') || query.includes('automatic')) {
+                const autopayBills = bills.filter(b => b.autopay);
+                const manualBills = bills.filter(b => !b.autopay && !b.paid);
+
+                if (query.includes('not') || query.includes('manual')) {
+                    if (manualBills.length === 0) {
+                        return "All your bills are on autopay!";
+                    }
+                    const billList = manualBills.map(b => `${b.name} - ${formatCurrency(b.amount)}`).join('<br>');
+                    return `Bills requiring manual payment:<br><br>${billList}`;
+                }
+
+                if (autopayBills.length === 0) {
+                    return "You don't have any bills on autopay.";
+                }
+                const billList = autopayBills.map(b => `${b.name} - ${formatCurrency(b.amount)}`).join('<br>');
+                return `Bills on autopay:<br><br>${billList}`;
+            }
+
+            // Default helpful response with new features
+            return `I can help you with:<br><br>
+                <strong>Bills:</strong><br>
+                • "What's due this week?"<br>
+                • "Show my subscriptions"<br>
+                • "What's overdue?"<br>
+                • "How much do I owe?"<br><br>
+                <strong>Expenses & Budget:</strong><br>
+                • "Add $50 for groceries"<br>
+                • "Show expense breakdown"<br>
+                • "Give me financial advice"<br>
+                • "List all expenses"<br><br>
+                Try asking me something!`;
+        }
+
+        // Initialize
+        loadBills(); // Load saved bills on page load
+        updateDashboard();
+        initCorisChat(); // Initialize Coris Chat with discovery features
+
+        // Welcome message
+        setTimeout(() => {
+            addChatMessage("Hi! I'm your bill assistant. Ask me anything about your bills - try 'What's due this week?' to get started! 👋", 'assistant');
+        }, 1000);
+    </script>
+
+    <!-- Unified Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" onclick="openContactModal(); return false;">📧 Contact</a>
+                <span>|</span>
+                <a href="#" onclick="showLegalModal('privacy'); return false;">🔒 Privacy Policy</a>
+                <span>|</span>
+                <a href="#" onclick="showLegalModal('terms'); return false;">📋 Terms of Service</a>
+                <span>|</span>
+                <a href="#" onclick="showLegalModal('disclaimer'); return false;">⚠️ Disclaimer</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Coris App. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-update year in footer and legal documents
+        const currentYear = new Date().getFullYear();
+        
+        if (document.getElementById('year')) {
+            document.getElementById('year').textContent = currentYear;
+        }
+        if (document.getElementById('privacyYear')) {
+            document.getElementById('privacyYear').textContent = currentYear;
+        }
+        if (document.getElementById('termsYear')) {
+            document.getElementById('termsYear').textContent = currentYear;
+        }
+        if (document.getElementById('disclaimerYear')) {
+            document.getElementById('disclaimerYear').textContent = currentYear;
+        }
+    </script>
+</body>
+</html>

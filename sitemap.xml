@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+
+  <!-- Main Landing Page -->
+  <url>
+    <loc>https://corisapp.dev/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Debt Payoff Calculator App -->
+  <url>
+    <loc>https://corisapp.dev/debt-payoff/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://corisapp.dev/og-image-debt.png</image:loc>
+      <image:title>Debt Payoff Calculator - Compare Strategies</image:title>
+      <image:caption>Free debt payoff calculator comparing Avalanche, Snowball, and Highest Balance methods</image:caption>
+    </image:image>
+    <mobile:mobile/>
+  </url>
+
+  <!-- Bill Tracker App -->
+  <url>
+    <loc>https://corisapp.dev/bill-tracker/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://corisapp.dev/og-image-bills.png</image:loc>
+      <image:title>Bill Tracker App - Never Miss a Payment</image:title>
+      <image:caption>Free bill tracker app with AI assistant. Organize bills and track payment dates.</image:caption>
+    </image:image>
+    <mobile:mobile/>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://corisapp.dev/legal/privacy/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://corisapp.dev/legal/terms/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://corisapp.dev/legal/disclaimer/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://corisapp.dev/contact/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Blog Posts (if adding blog section) -->
+  <!-- Example uncomment and modify as needed:
+  <url>
+    <loc>https://corisapp.dev/blog/debt-payoff-strategies/</loc>
+    <lastmod>2025-10-24T00:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://corisapp.dev/blog/images/strategies.png</image:loc>
+    </image:image>
+  </url>
+  -->
+
+</urlset>

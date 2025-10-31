@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coris Budget Chat - AI-Powered Budget Assistant</title>
+    <meta name="description" content="Chat with your AI budget assistant. Manage expenses, track budgets, and get financial insights through natural conversation.">
+    <meta name="keywords" content="budget chat, AI assistant, expense tracking, budget management, financial planning">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://corisapp.dev/budget-chat/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://corisapp.dev/budget-chat/">
+    <meta property="og:title" content="Coris Budget Chat - Talk About Your Budget">
+    <meta property="og:description" content="Chat with AI about your budget. Track expenses, ask questions, get insights.">
+    <meta property="og:image" content="https://corisapp.dev/og-image-budget.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Coris App">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://corisapp.dev/budget-chat/">
+    <meta name="twitter:title" content="Coris Budget Chat - AI Budget Assistant">
+    <meta name="twitter:description" content="Chat with AI about budgets, expenses, and financial planning.">
+    <meta name="twitter:image" content="https://corisapp.dev/og-image-budget.png">
+    <meta name="twitter:creator" content="@corisapp">
+    
+    <!-- Additional Meta -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="alternate" hreflang="en-US" href="https://corisapp.dev/budget-chat/">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Coris Budget Chat",
+      "description": "AI-powered budget assistant for managing expenses and financial planning through natural conversation",
+      "url": "https://corisapp.dev/budget-chat/",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2d3748;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin: 30px 0 20px 0;
+            animation: fadeInDown 0.6s ease;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .chat-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .messages-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 8px;
+            animation: slideInUp 0.3s ease;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            word-wrap: break-word;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .message.user .message-content {
+            background: #667eea;
+            color: white;
+            border-radius: 16px 4px 16px 16px;
+        }
+
+        .message.bot .message-content {
+            background: #e2e8f0;
+            color: #2d3748;
+            border-radius: 4px 16px 16px 16px;
+        }
+
+        .input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-wrapper {
+            flex: 1;
+            display: flex;
+            gap: 10px;
+        }
+
+        #chatInput {
+            flex: 1;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            min-height: 48px;
+        }
+
+        #chatInput:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        #sendBtn, #clearBtn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 48px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #sendBtn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        #sendBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        #sendBtn:active {
+            transform: translateY(0);
+        }
+
+        #clearBtn {
+            background: #f0f0f0;
+            color: #2d3748;
+        }
+
+        #clearBtn:hover {
+            background: #e0e0e0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            word-break: break-word;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .commands-info {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .commands-info h3 {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .command-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .command-list li {
+            padding: 5px 0;
+            opacity: 0.9;
+        }
+
+        .command-list code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+
+        .footer {
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 30px 20px;
+            margin-top: auto;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .footer-links span {
+            color: #cbd5e0;
+        }
+
+        .footer-bottom {
+            color: #a0aec0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .welcome-message {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .welcome-message h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .welcome-message p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .chat-container {
+                height: 500px;
+            }
+
+            .message-content {
+                max-width: 85%;
+                font-size: 0.9rem;
+                padding: 10px 14px;
+            }
+
+            .stat-card {
+                padding: 15px;
+            }
+
+            .stat-value {
+                font-size: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .input-area {
+                padding: 15px;
+                gap: 8px;
+            }
+
+            #chatInput {
+                padding: 10px 12px;
+                font-size: 0.95rem;
+                min-height: 44px;
+            }
+
+            #sendBtn, #clearBtn {
+                min-width: 44px;
+                min-height: 44px;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                padding: 20px 15px;
+                margin-top: 40px;
+            }
+
+            .footer-links {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+
+            .footer-links a {
+                font-size: 0.85rem;
+            }
+
+            .footer-bottom {
+                font-size: 0.75rem;
+            }
+
+            .commands-info {
+                font-size: 0.85rem;
+            }
+
+            .welcome-message {
+                padding: 15px;
+            }
+
+            .welcome-message h2 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .chat-container {
+                height: 400px;
+                border-radius: 12px;
+            }
+
+            .message-content {
+                max-width: 90%;
+                font-size: 0.85rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .input-wrapper {
+                flex-direction: column;
+            }
+
+            #sendBtn, #clearBtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💬 Coris Budget Chat</h1>
+            <p>Talk about your budget with AI</p>
+        </div>
+
+        <div class="welcome-message">
+            <h2>Welcome! 👋</h2>
+            <p>I'm your AI budget assistant. I can help you:</p>
+            <p>📊 Track your bills and expenses</p>
+            <p>💰 Manage your monthly budget</p>
+            <p>📈 Get insights about your spending</p>
+            <p>✨ Answer questions about your finances</p>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;"><strong>Tip:</strong> Your bills from the Bill Tracker are automatically loaded!</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Bills</div>
+                <div class="stat-value" id="totalBills">$0.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Budget</div>
+                <div class="stat-value" id="totalBudget">$0.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Budget Used</div>
+                <div class="stat-value" id="budgetUsed">0%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Remaining</div>
+                <div class="stat-value" id="budgetRemaining">$0.00</div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="messages-area" id="messagesArea">
+                <div class="message bot">
+                    <div class="message-content">
+                        👋 Hi! I'm your budget assistant. Ask me anything about your budget or type a command to get started!
+                    </div>
+                </div>
+            </div>
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="chatInput" placeholder="Ask about your budget, add expenses, or type 'help'..." required>
+                    <button id="sendBtn" title="Send message (Ctrl+Enter)">📤 Send</button>
+                    <button id="clearBtn" title="Clear chat history">🗑️</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="commands-info">
+            <h3>💡 Try These Commands:</h3>
+            <ul class="command-list">
+                <li><code>"What's my budget?"</code> - See budget summary</li>
+                <li><code>"Add $50 for groceries"</code> - Add an expense</li>
+                <li><code>"Set budget to $3000"</code> - Set monthly budget</li>
+                <li><code>"Show breakdown"</code> - See spending by category</li>
+                <li><code>"help"</code> - List all commands</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html" onclick="toggleMenu()">💰 Bill Tracker</a>
+                <span>|</span>
+                <a href="payoff.html" onclick="toggleMenu()">📊 Debt Payoff</a>
+                <span>|</span>
+                <a href="#" onclick="toggleAbout(); return false;">ℹ️ About</a>
+                <span>|</span>
+                <a href="#" onclick="showLegalModal('privacy'); return false;">🔒 Privacy</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Coris App. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========================================
+        // STAGE 1: RULE-BASED BUDGET ASSISTANT
+        // (Works immediately, no AI needed)
+        // ========================================
+
+        class BudgetChat {
+            constructor() {
+                this.bills = [];
+                this.expenses = [];
+                this.budget = 2500;
+                this.budgetGoals = {};
+                this.conversationHistory = [];
+                this.loadData();
+                this.initializeUI();
+            }
+
+            // Load data from localStorage and Bill Tracker
+            loadData() {
+                // Load bills from Bill Tracker app
+                const billsData = localStorage.getItem('corisBills');
+                this.bills = billsData ? JSON.parse(billsData) : [];
+
+                // Load budget data
+                const budgetData = localStorage.getItem('budgetData');
+                if (budgetData) {
+                    const parsed = JSON.parse(budgetData);
+                    this.expenses = parsed.expenses || [];
+                    this.budget = parsed.budget || 2500;
+                    this.budgetGoals = parsed.budgetGoals || {};
+                    this.conversationHistory = parsed.conversationHistory || [];
+                }
+            }
+
+            // Save data to localStorage
+            saveData() {
+                localStorage.setItem('budgetData', JSON.stringify({
+                    expenses: this.expenses,
+                    budget: this.budget,
+                    budgetGoals: this.budgetGoals,
+                    conversationHistory: this.conversationHistory
+                }));
+            }
+
+            // Initialize UI
+            initializeUI() {
+                document.getElementById('year').textContent = new Date().getFullYear();
+                this.updateStats();
+                this.attachEventListeners();
+            }
+
+            // Attach event listeners
+            attachEventListeners() {
+                const input = document.getElementById('chatInput');
+                const sendBtn = document.getElementById('sendBtn');
+                const clearBtn = document.getElementById('clearBtn');
+
+                sendBtn.addEventListener('click', () => this.handleSendMessage());
+                clearBtn.addEventListener('click', () => this.clearChat());
+
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.handleSendMessage();
+                    }
+                });
+            }
+
+            // ========================================
+            // STAGE 1: MESSAGE HANDLING
+            // ========================================
+
+            handleSendMessage() {
+                const input = document.getElementById('chatInput');
+                const message = input.value.trim();
+
+                if (!message) return;
+
+                this.addMessage(message, 'user');
+                input.value = '';
+
+                // Stage 1: Rule-based processing
+                const response = this.processMessage(message);
+                setTimeout(() => this.addMessage(response, 'bot'), 500);
+            }
+
+            // Process message and determine intent
+            processMessage(message) {
+                const lower = message.toLowerCase();
+
+                // Intent: Show budget summary
+                if (lower.includes('budget') && (lower.includes('what') || lower.includes('show') || lower.includes('my'))) {
+                    return this.getBudgetSummary();
+                }
+
+                // Intent: Add expense
+                if (lower.includes('add') && (lower.includes('$') || /\d+/.test(message))) {
+                    return this.handleAddExpense(message);
+                }
+
+                // Intent: Set budget
+                if (lower.includes('set') && lower.includes('budget')) {
+                    return this.handleSetBudget(message);
+                }
+
+                // Intent: Show breakdown
+                if (lower.includes('breakdown') || lower.includes('spending') || lower.includes('category')) {
+                    return this.getSpendingBreakdown();
+                }
+
+                // Intent: Get advice
+                if (lower.includes('advice') || lower.includes('optimize') || lower.includes('save') || lower.includes('where')) {
+                    return this.getFinancialAdvice();
+                }
+
+                // Intent: Show help
+                if (lower.includes('help') || lower.includes('command') || lower.includes('what can')) {
+                    return this.getHelp();
+                }
+
+                // Intent: Show remaining
+                if (lower.includes('remaining') || lower.includes('left') || lower.includes('how much')) {
+                    return this.getBudgetRemaining();
+                }
+
+                // Intent: Show expenses
+                if (lower.includes('expense') && (lower.includes('show') || lower.includes('list'))) {
+                    return this.listExpenses();
+                }
+
+                // Default: Show budget
+                return this.getBudgetSummary();
+            }
+
+            // ========================================
+            // STAGE 1: RESPONSE GENERATORS
+            // ========================================
+
+            getBudgetSummary() {
+                const totalSpent = this.getTotalSpent();
+                const remaining = this.budget - totalSpent;
+                const percentage = ((totalSpent / this.budget) * 100).toFixed(1);
+
+                return `💰 **Budget Summary**\n\n` +
+                    `📊 Total Bills: $${this.getTotalBills().toFixed(2)}\n` +
+                    `💸 Extra Expenses: $${this.getTotalExpenses().toFixed(2)}\n` +
+                    `Total Spent: $${totalSpent.toFixed(2)}\n` +
+                    `Budget Limit: $${this.budget.toFixed(2)}\n` +
+                    `Remaining: $${remaining.toFixed(2)}\n` +
+                    `Usage: ${percentage}%\n\n` +
+                    (percentage > 100 ? '⚠️ Over budget!' : percentage > 80 ? '⚠️ Approaching limit' : '✅ On track!');
+            }
+
+            handleAddExpense(message) {
+                const amountMatch = message.match(/\$?([\d.]+)/);
+                const amount = amountMatch ? parseFloat(amountMatch[1]) : null;
+
+                if (!amount) {
+                    return '❌ Please include an amount. Example: "Add $50 for groceries"';
+                }
+
+                const categoryMatch = message.match(/for\s+([^$]*?)(?:\s*$|\.)/i);
+                const category = categoryMatch ? categoryMatch[1].trim() : 'Other';
+
+                const expense = {
+                    id: Date.now(),
+                    amount,
+                    category,
+                    date: new Date().toLocaleDateString(),
+                    description: `$${amount} - ${category}`
+                };
+
+                this.expenses.push(expense);
+                this.saveData();
+                this.updateStats();
+
+                const totalSpent = this.getTotalSpent();
+                const remaining = this.budget - totalSpent;
+
+                return `✅ **Added Expense**\n\n` +
+                    `Amount: $${amount.toFixed(2)}\n` +
+                    `Category: ${category}\n` +
+                    `Date: ${expense.date}\n\n` +
+                    `📊 Updated Budget:\n` +
+                    `Spent: $${totalSpent.toFixed(2)} / $${this.budget.toFixed(2)}\n` +
+                    `Remaining: $${remaining.toFixed(2)}`;
+            }
+
+            handleSetBudget(message) {
+                const amountMatch = message.match(/\$?([\d.]+)/);
+                const amount = amountMatch ? parseFloat(amountMatch[1]) : null;
+
+                if (!amount) {
+                    return '❌ Please include an amount. Example: "Set budget to $3000"';
+                }
+
+                const oldBudget = this.budget;
+                this.budget = amount;
+                this.saveData();
+                this.updateStats();
+
+                return `✅ **Budget Updated**\n\n` +
+                    `Old Budget: $${oldBudget.toFixed(2)}\n` +
+                    `New Budget: $${amount.toFixed(2)}\n` +
+                    `Change: $${(amount - oldBudget).toFixed(2)}\n\n` +
+                    `Your new monthly budget is set!`;
+            }
+
+            getSpendingBreakdown() {
+                const breakdown = this.getCategoryBreakdown();
+                let response = '📊 **Spending Breakdown**\n\n';
+
+                if (this.bills.length > 0) {
+                    response += '**Bills:**\n';
+                    for (const bill of this.bills) {
+                        response += `• ${bill.name}: $${bill.amount.toFixed(2)}\n`;
+                    }
+                }
+
+                if (this.expenses.length > 0) {
+                    response += '\n**Expenses:**\n';
+                    for (const [category, total] of Object.entries(breakdown)) {
+                        if (category !== 'Total Bills') {
+                            response += `• ${category}: $${total.toFixed(2)}\n`;
+                        }
+                    }
+                }
+
+                response += `\n💰 Total: $${this.getTotalSpent().toFixed(2)}`;
+                return response;
+            }
+
+            getFinancialAdvice() {
+                const totalSpent = this.getTotalSpent();
+                const billsTotal = this.getTotalBills();
+                const expensesTotal = this.getTotalExpenses();
+                const percentage = ((totalSpent / this.budget) * 100).toFixed(1);
+
+                let advice = '💡 **Financial Insights**\n\n';
+
+                if (percentage > 100) {
+                    advice += '⚠️ You\'re over budget! Consider:\n';
+                    advice += '• Reducing discretionary spending\n';
+                    advice += '• Looking for bill discounts\n';
+                } else if (percentage > 80) {
+                    advice += '⚠️ You\'re using 80%+ of budget\n';
+                    advice += '• Be cautious with new expenses\n';
+                } else {
+                    advice += '✅ You\'re on track!\n';
+                    advice += '• ' + (expensesTotal > billsTotal ? 'Consider reducing extra expenses' : 'Good bill management');
+                }
+
+                advice += `\n📈 Breakdown:\n` +
+                    `• Bills: ${((billsTotal / totalSpent) * 100).toFixed(0)}%\n` +
+                    `• Other: ${((expensesTotal / totalSpent) * 100).toFixed(0)}%`;
+
+                return advice;
+            }
+
+            getBudgetRemaining() {
+                const totalSpent = this.getTotalSpent();
+                const remaining = this.budget - totalSpent;
+                const percentage = ((totalSpent / this.budget) * 100).toFixed(1);
+
+                return `💰 **Budget Remaining**\n\n` +
+                    `Spent: $${totalSpent.toFixed(2)}\n` +
+                    `Budget: $${this.budget.toFixed(2)}\n` +
+                    `Remaining: $${remaining.toFixed(2)}\n` +
+                    `Used: ${percentage}%\n\n` +
+                    (remaining < 0 ? '❌ Over by: $' + Math.abs(remaining).toFixed(2) : '✅ You have $' + remaining.toFixed(2) + ' left');
+            }
+
+            listExpenses() {
+                if (this.expenses.length === 0) {
+                    return '📝 No expenses tracked yet. Try: "Add $50 for groceries"';
+                }
+
+                let list = '📝 **Your Expenses**\n\n';
+                for (const expense of this.expenses) {
+                    list += `• $${expense.amount.toFixed(2)} - ${expense.category} (${expense.date})\n`;
+                }
+
+                list += `\n💰 Total: $${this.getTotalExpenses().toFixed(2)}`;
+                return list;
+            }
+
+            getHelp() {
+                return `❓ **Available Commands**\n\n` +
+                    `**Budget:**\n` +
+                    `• "What's my budget?" - View budget summary\n` +
+                    `• "Set budget to $3000" - Set monthly budget\n` +
+                    `• "How much left?" - Check remaining\n\n` +
+                    `**Expenses:**\n` +
+                    `• "Add $50 for groceries" - Add expense\n` +
+                    `• "Show expenses" - List all expenses\n` +
+                    `• "Show breakdown" - View by category\n\n` +
+                    `**Insights:**\n` +
+                    `• "Give me advice" - Financial tips\n` +
+                    `• "Where can I save?" - Optimization ideas\n\n` +
+                    `Ask naturally or use these commands!`;
+            }
+
+            // ========================================
+            // STAGE 2: AI INTEGRATION (Ready for Claude API)
+            // ========================================
+
+            // To enable Stage 2:
+            // 1. Add Claude API key to environment
+            // 2. Uncomment processWithAI() call in handleSendMessage()
+            // 3. See documentation for implementation
+
+            async processWithAI(message) {
+                // Stage 2: AI-Powered Processing (Future Enhancement)
+                // This will use Claude API for:
+                // - Natural language understanding
+                // - Context-aware responses
+                // - Smarter recommendations
+                // - Learning from conversation history
+
+                try {
+                    const context = this.getBudgetContext();
+                    // Call to Claude API would go here
+                    // For now, returns rule-based response
+                    return this.processMessage(message);
+                } catch (error) {
+                    console.log('AI processing not enabled');
+                    return this.processMessage(message);
+                }
+            }
+
+            getBudgetContext() {
+                return {
+                    totalBills: this.getTotalBills(),
+                    totalExpenses: this.getTotalExpenses(),
+                    budget: this.budget,
+                    spent: this.getTotalSpent(),
+                    percentage: ((this.getTotalSpent() / this.budget) * 100).toFixed(1),
+                    categories: this.getCategoryBreakdown(),
+                    recentExpenses: this.expenses.slice(-5)
+                };
+            }
+
+            // ========================================
+            // STAGE 3: DASHBOARD INTEGRATION (Ready)
+            // ========================================
+
+            // To enable Stage 3:
+            // 1. Create main dashboard at /dashboard/
+            // 2. Load this data into dashboard
+            // 3. Use shared localStorage keys
+            // 4. Implement cross-app navigation
+
+            getDashboardData() {
+                return {
+                    app: 'budget-chat',
+                    timestamp: new Date().toISOString(),
+                    stats: {
+                        totalBills: this.getTotalBills(),
+                        totalExpenses: this.getTotalExpenses(),
+                        totalSpent: this.getTotalSpent(),
+                        budget: this.budget,
+                        remaining: this.budget - this.getTotalSpent(),
+                        percentage: ((this.getTotalSpent() / this.budget) * 100).toFixed(1)
+                    },
+                    breakdown: this.getCategoryBreakdown(),
+                    expenses: this.expenses,
+                    bills: this.bills
+                };
+            }
+
+            // ========================================
+            // HELPER FUNCTIONS
+            // ========================================
+
+            getTotalBills() {
+                return this.bills.reduce((sum, bill) => sum + (bill.amount || 0), 0);
+            }
+
+            getTotalExpenses() {
+                return this.expenses.reduce((sum, exp) => sum + exp.amount, 0);
+            }
+
+            getTotalSpent() {
+                return this.getTotalBills() + this.getTotalExpenses();
+            }
+
+            getCategoryBreakdown() {
+                const breakdown = {};
+
+                // Add bills
+                this.bills.forEach(bill => {
+                    breakdown['Bills'] = (breakdown['Bills'] || 0) + (bill.amount || 0);
+                });
+
+                // Add expenses by category
+                this.expenses.forEach(exp => {
+                    breakdown[exp.category] = (breakdown[exp.category] || 0) + exp.amount;
+                });
+
+                return breakdown;
+            }
+
+            updateStats() {
+                const totalBills = this.getTotalBills();
+                const totalSpent = this.getTotalSpent();
+                const remaining = this.budget - totalSpent;
+                const percentage = Math.min(((totalSpent / this.budget) * 100).toFixed(1), 100);
+
+                document.getElementById('totalBills').textContent = `$${totalBills.toFixed(2)}`;
+                document.getElementById('totalBudget').textContent = `$${this.budget.toFixed(2)}`;
+                document.getElementById('budgetUsed').textContent = `${percentage}%`;
+                document.getElementById('budgetRemaining').textContent = `$${remaining.toFixed(2)}`;
+                document.getElementById('progressFill').style.width = percentage + '%';
+            }
+
+            addMessage(text, sender) {
+                const messagesArea = document.getElementById('messagesArea');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'message-content';
+                contentDiv.textContent = text;
+
+                messageDiv.appendChild(contentDiv);
+                messagesArea.appendChild(messageDiv);
+                messagesArea.scrollTop = messagesArea.scrollHeight;
+
+                this.conversationHistory.push({ sender, text, timestamp: new Date().toISOString() });
+                this.saveData();
+            }
+
+            clearChat() {
+                if (confirm('Clear chat history? This cannot be undone.')) {
+                    const messagesArea = document.getElementById('messagesArea');
+                    messagesArea.innerHTML = '';
+                    this.conversationHistory = [];
+                    this.expenses = [];
+                    this.saveData();
+
+                    this.addMessage('👋 Chat cleared! Ready to start fresh.', 'bot');
+                    this.updateStats();
+                }
+            }
+        }
+
+        // ========================================
+        // INITIALIZATION
+        // ========================================
+
+        const budgetChat = new BudgetChat();
+
+        // Additional UI Functions
+        function toggleAbout() {
+            alert('Coris Budget Chat v1.0\n\nAI-powered budget assistant for managing your finances through natural conversation.\n\nBuilt with ❤️ by Coris\n\ncorisapp.dev');
+        }
+
+        function showLegalModal(type) {
+            const title = type === 'privacy' ? 'Privacy Policy' : 'Terms of Service';
+            alert(`${title}\n\nFor full details, visit corisapp.dev`);
+        }
+    </script>
+</body>
+</html>
